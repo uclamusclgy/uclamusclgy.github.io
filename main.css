@@ -111,7 +111,11 @@ ul.navbar a:hover {
     float: none;
     display: block;
 		width: 100%;
-  }
+	}
+	
+	.column {
+    width: 100%;
+	}
 }
 
 section {
@@ -119,6 +123,14 @@ section {
 	align-content: center;
 	justify-content: center;
 	text-align:center;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
 }
 
 .current {
@@ -146,6 +158,10 @@ section {
 
 .bio {
 	max-width: 25%;
+}
+
+.spotify {
+	padding: 0vw 8vw 1vw;
 }
 
 footer {
