@@ -6,77 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="main.css" rel="stylesheet" type="text/css">
 	
-	<script>
-var slideIndex = 1;
-
-var myTimer;
-
-var slideshowContainer;
-
-window.addEventListener("load",function() {
-    showSlides(slideIndex);
-    myTimer = setInterval(function(){plusSlides(1)}, 4000);
-  
-    //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
-  
-    //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-    // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
-  
-    slideshowContainer.addEventListener('mouseenter', pause)
-    slideshowContainer.addEventListener('mouseleave', resume)
-})
-
-// NEXT AND PREVIOUS CONTROL
-function plusSlides(n){
-  clearInterval(myTimer);
-  if (n < 0){
-    showSlides(slideIndex -= 1);
-  } else {
-   showSlides(slideIndex += 1); 
-  }
-  
-  //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
-  
-  if (n === -1){
-    myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
-  } else {
-    myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
-  }
-}
-
-//Controls the current slide and resets interval if needed
-function currentSlide(n){
-  clearInterval(myTimer);
-  myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n){
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
-
-pause = () => {
-  clearInterval(myTimer);
-}
-
-resume = () =>{
-  clearInterval(myTimer);
-  myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
-}
-</script>
+<script src="slideshow.js"></script>
 	
 </head>
 <body>
@@ -98,18 +28,14 @@ resume = () =>{
 		<div class="slideshow-inner">
 			<div class="mySlides fade">
 				<img  src="sky.jpeg" style="width:" 100%; alt="sally lightfoot crab"/>
-				<div class="text">Sally Lightfoot Crab</div>
+				<div class="text">Welcome to the UCLA Musicology Department's first undergraduate research journal, MUSE!</div>
   			</div>
-  			<div class="mySlides">
-				<img  src="sky.jpeg" style="width: 100%;" alt="fighting nazca boobies"/>
-				<div class="text">A scuffle between two Nazca Boobies</div>
+  			<div class="mySlides fade">
+				<img  src="sandra.jpg" style="width: 100%;" alt="fighting nazca boobies"/>
+				<div class="text">Join the Active Listening Club!</div>
 			</div>
 			<div class="mySlides fade">
-				<img  src="sky.jpeg" style="width: 100%;" alt="otovalo waterfall"/><div class="text">A waterfall discovered on a hike in Otovalo</div>
-			</div>
-			<div class="mySlides">
-				<img  src="sky.jpeg" style="width: 100%;" alt="pelican"/>
-				<div class="text">Pelican</div>
+				<img  src="sky.jpeg" style="width: 100%;" alt="otovalo waterfall"/><div class="text">Follow us on Spotify!</div>
 			</div>
 		</div>
   			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>

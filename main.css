@@ -22,9 +22,6 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	margin: auto;
-	align-content: center;
-	justify-content: center;
-	text-align: center;
 }
 
 header {
@@ -122,6 +119,12 @@ section {
 	overflow: hidden;
 	align-content: center;
 	justify-content: center;
+	text-align: center;
+}
+
+.title {
+	align-content: center;
+	justify-content: center;
 	text-align:center;
 }
 
@@ -133,31 +136,40 @@ section {
   flex: 50%;
 }
 
-.current {
-	
-}
-
 .issues {
 	float: left;
 	display: flex;
-	flex-flow: wrap;
+	 flex-flow: wrap;
 	margins: 4vw;
 }
 
 .issue {
 	align-content: center;
 	justify-content: space-around;
-	text-align:center;
-	max-width: 25%;
+	text-align: center;
+	max-width: 33%;
 	padding: 2vw;
+}
+
+.flex-container {
+	display: flex;
+	flex-flow: row wrap;
+	padding: 0vw 3vw 3vw;
+	list-style-type: none;
+	justify-content: space-around;
+}
+
+.bio {
+	max-width: 30%;
+	padding: 1vw;
+	border: 1px solid #8099bd;
+	margin: 1vw;
+	
 }
 
 .img {
 	max-width: 100%;
-}
-
-.bio {
-	max-width: 25%;
+	height: auto;
 }
 
 .spotify {
@@ -174,6 +186,7 @@ footer {
 	text-align: center;
 	overflow: hidden;
 	background: #8099bd;
+	/*border-top: .35vw solid #F1F7ED;*/
 }
 
 .slideshow-container {
@@ -184,7 +197,7 @@ footer {
 
 .mySlides {
 	display: none;
-	max-height: 47vw;
+	max-height: 52vw;
 }
 
 .prev, .next {
@@ -220,7 +233,7 @@ footer {
     padding-top: 12px;
   padding-bottom: 12px;
     position: absolute;
-    bottom: 0;
+    top: 0;
     width: 100%;
     text-align: center;
     background-color: #222428
@@ -232,4 +245,21 @@ footer {
     padding: 8px 12px;
     position: absolute;
     top: 0
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .8} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .9} 
+  to {opacity: 1}
 }
