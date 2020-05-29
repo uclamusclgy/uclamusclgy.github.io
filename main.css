@@ -72,6 +72,12 @@ h5 {
 	padding: 1.5vw;
 }
 
+h6 {
+	font-size: 1vw;
+	color: #8099bd;
+	padding: 1vw 10vw 2vw;
+}
+
 p {
 	font-size: 1vw;
 	color: #F1F7ED;
