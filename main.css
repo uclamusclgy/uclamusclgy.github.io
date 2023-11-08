@@ -182,13 +182,13 @@ section {
 	padding: 0vw 8vw 1vw;
 }
 
-.page-container{
+page-container{
 	position: relative;
 	min-height: 100vh;
 }
 
-.content-wrap{
-	padding-bottom: 2.5rem;
+content-wrap{
+	padding-bottom: 5vh;
 }
 
 footer {
