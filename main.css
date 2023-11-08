@@ -183,7 +183,7 @@ section {
 }
 
 footer {
-	position: fixed;
+	position: absolute;
 	bottom: 0%;
 	width: 100%;
 	padding: 2vw;
@@ -258,6 +258,15 @@ footer {
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+page-container{
+	position: relative;
+	min-height: 100vh;
+}
+
+content-wrap{
+	padding-bottom: 2.5rem;
 }
 
 @-webkit-keyframes fade {
